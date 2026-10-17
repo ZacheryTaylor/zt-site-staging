@@ -60,7 +60,7 @@ sheetTitle: "Civil work — projects & history"
       <li><a href="{{ p.href }}" target="_blank" rel="noopener">{{ p.title }} <span aria-hidden="true">↗</span></a><span class="product-price{% if p.price == 'Free' %} is-free{% endif %}">{{ "FREE" if p.price == "Free" else p.price }}</span></li>
       {%- endif %}{% endfor %}
     </ul>
-    <p class="product-store"><a class="text-link" href="{{ civil.productStore }}" target="_blank" rel="noopener">All products on Gumroad ↗</a></p>
+    <p class="product-store"><a href="{{ civil.productStore }}" target="_blank" rel="noopener">All products on Gumroad ↗</a></p>
   </div>
 </section>
 
