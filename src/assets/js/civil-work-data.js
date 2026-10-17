@@ -151,7 +151,7 @@ const civilWork = {
       price: 'Free',
       blurb: 'A free taste of the exam bundle: sample reference pages and worked examples.',
       href: "https://ztllc.gumroad.com/l/pe-construction-free-sample",
-      cover: "images/products/pe-construction-bundle.png",
+      cover: "images/products/pe-construction-free-sample.png",
       video: "media/products/free-lead-magnets.mp4"
     },
     {
@@ -169,7 +169,7 @@ const civilWork = {
       price: 'Free',
       blurb: 'Quick trench excavation and pipe bedding quantities in one sheet.',
       href: "https://ztllc.gumroad.com/l/free-trench-calculator",
-      cover: "images/products/sitework-estimator.png",
+      cover: "images/products/free-trench-calculator.png",
       video: "media/products/free-lead-magnets.mp4"
     },
     {
