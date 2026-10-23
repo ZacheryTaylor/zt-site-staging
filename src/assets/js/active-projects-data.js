@@ -25,12 +25,12 @@ const activeProjects = {
       titleNote: "working name",
       status: "In development",
       cover: "images/personal/covers/tree-inventory.jpg",
-      coverAlt: "ZT Tree Inventory on an iPhone: the Trees tab listing sample tagged trees with species, DBH, protected and heritage flags, and GPS accuracy",
+      coverAlt: "ZT Tree Inventory on an iPhone: the Trees tab listing sample tagged trees with species, DBH, protected and heritage flags, and each point’s estimated GPS error",
       text: "An offline iPhone web app for field tree inventories: averaged GPS tree locations, tree records, and Civil 3D-ready exports.",
       features: [
-        "Averaged GPS readings with a live accuracy readout, converted to NAD83 Florida State Plane North (US ft) or a coordinate system you pick. Checked against NOAA NCAT: 5 of 5 points match within 0.001 ft.",
+        "Averaged GPS readings with a live accuracy readout. Phone GPS is typically within 10–30 ft. Coordinates convert to NAD83 Florida State Plane North (US ft) or a system you pick; the conversion math matches NOAA NCAT within 0.001 ft on 5 test points.",
         "Tag #, species, DBH (multi-stem trees combined), canopy, condition and photos for each tree, with suggested protected/heritage flags from the Pensacola, Escambia and Santa Rosa thresholds.",
-        "Separate jobs for each client and site, plus a field accuracy check against a known corner point.",
+        "Separate jobs for each client and site, plus a field check of GPS error against a known corner point.",
         "Exports a Civil 3D PNEZD CSV, an Excel tree log ready for the mitigation calculator, a photos zip, and a 6-page Tree Inventory Report PDF.",
         "A parcel sketch page that plots numbered tags on county GIS parcel outlines with a title block, saved as PNG or PDF at Letter or 11x17."
       ],
