@@ -65,6 +65,9 @@ scripts: ["/assets/js/quotes.js"]
   </div>
 </section>
 
+{%- set apId = "home-ap" %}{%- set apSheet = "P-101" %}
+{% include "partials/active-projects.njk" %}
+
 <section class="band" id="civil" aria-labelledby="civil-title">
   <div class="wrap">
     {{ ui.sectionLabel("C-101", "Civil work") }}
