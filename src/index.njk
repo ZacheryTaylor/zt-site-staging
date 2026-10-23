@@ -68,34 +68,6 @@ scripts: ["/assets/js/quotes.js"]
 {%- set apId = "home-ap" %}{%- set apSheet = "P-101" %}
 {% include "partials/active-projects.njk" %}
 
-<section class="band" id="civil" aria-labelledby="civil-title">
-  <div class="wrap">
-    {{ ui.sectionLabel("C-101", "Civil work") }}
-    <h2 id="civil-title">Land development, <em>drawn carefully.</em></h2>
-    <p class="section-intro">{{ civil.summary }}</p>
-    <ul class="sheet-grid">
-      {%- for s in civil.scope %}
-      <li class="sheet reveal">
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.text }}</p>
-        <div class="tb" aria-hidden="true"><span>Scope</span><span>{{ s.code }}</span></div>
-      </li>
-      {%- endfor %}
-    </ul>
-    <div class="cs-wrap">
-      <div class="cs-head">
-        <h3 class="cs-title">Civil projects</h3>
-        <p>Each project gets its own page once it’s public and cleared to share.</p>
-      </div>
-      {%- set galleryQuick = false %}
-      {% include "partials/civil-gallery.njk" %}
-    </div>
-    <div class="btn-row" style="margin-top:28px">
-      <a class="btn btn-primary" href="/civil.html">Civil projects &amp; work history</a>
-    </div>
-  </div>
-</section>
-
 <section class="band" id="projects" aria-labelledby="projects-title">
   <div class="wrap">
     {{ ui.sectionLabel("M-201", "Engineering projects") }}
@@ -173,6 +145,18 @@ scripts: ["/assets/js/quotes.js"]
     <h2 id="life-title">The rest <em>of the story.</em></h2>
     <p class="section-intro">Work is only part of it. There are the podcasts I’ve hosted with friends, a Best Ball archive going back to 2021, apps I built for my leagues, and a bank of quotes copied by hand from more than a hundred books.</p>
     {% include "partials/story-links.njk" %}
+  </div>
+</section>
+
+<section class="band" id="civil" aria-labelledby="civil-title">
+  <div class="wrap">
+    {{ ui.sectionLabel("C-101", "Civil work") }}
+    <h2 id="civil-title">Civil <em>work.</em></h2>
+    <p class="section-intro">{{ civil.summary }}</p>
+    <div class="btn-row" style="margin-top:22px">
+      <a class="btn btn-primary" href="/civil.html">Work history &amp; credentials</a>
+      <a class="btn" href="/civil.html#products-title">Digital products</a>
+    </div>
   </div>
 </section>
 
