@@ -90,9 +90,18 @@ scripts: ["/assets/js/quotes.js"]
   </div>
 </section>
 
+<section class="band" id="life" aria-labelledby="life-title">
+  <div class="wrap">
+    {{ ui.sectionLabel("L-301", "Life & interests") }}
+    <h2 id="life-title">The rest <em>of the story.</em></h2>
+    <p class="section-intro">Work is only part of it. There are the podcasts I’ve hosted with friends, a Best Ball archive going back to 2021, apps I built for my leagues, and a bank of quotes copied by hand from more than a hundred books.</p>
+    {% include "partials/story-links.njk" %}
+  </div>
+</section>
+
 <section class="band" id="book" aria-labelledby="book-title">
   <div class="wrap">
-    {{ ui.sectionLabel("W-301", "The book") }}
+    {{ ui.sectionLabel("W-401", "The book") }}
     <h2 id="book-title">The book.</h2>
     <div class="book-feature reveal">
       <div>
@@ -116,7 +125,7 @@ scripts: ["/assets/js/quotes.js"]
 
 <section class="band" id="story" aria-labelledby="story-title">
   <div class="wrap">
-    {{ ui.sectionLabel("G-401", "The story so far") }}
+    {{ ui.sectionLabel("G-501", "The story so far") }}
     <h2 id="story-title">Ideas, rigor, <em>and the long game.</em></h2>
     <p class="section-intro">Mathematics, then mechanical engineering, a passed FE exam, five years at civil design firms, a first home, a marriage, and a book. The latest milestones are below, newest first. <a class="text-link" href="/now.html">What I’m doing now</a></p>
     <div class="story-grid">
@@ -144,16 +153,6 @@ scripts: ["/assets/js/quotes.js"]
     </div>
   </div>
 </section>
-
-<section class="band" id="life" aria-labelledby="life-title">
-  <div class="wrap">
-    {{ ui.sectionLabel("L-501", "Life & interests") }}
-    <h2 id="life-title">The rest <em>of the story.</em></h2>
-    <p class="section-intro">Work is only part of it. There are the podcasts I’ve hosted with friends, a Best Ball archive going back to 2021, apps I built for my leagues, and a bank of quotes copied by hand from more than a hundred books.</p>
-    {% include "partials/story-links.njk" %}
-  </div>
-</section>
-
 
 <section class="band" id="contact" aria-labelledby="contact-title">
   <div class="wrap">

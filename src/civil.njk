@@ -8,6 +8,8 @@ sheet: C-101
 sheetTitle: "Civil work — projects & history"
 ---
 {%- import "macros.njk" as ui with context -%}
+{#- Sheet numbers run in page order; the gallery (C-102) only shows once a real project exists. -#}
+{%- set off = 0 if projects.civil.length else -1 -%}
 <header class="page-header">
   <div class="wrap">
     <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Civil Work</li></ol>
@@ -38,7 +40,7 @@ sheetTitle: "Civil work — projects & history"
 
 <section class="band" aria-labelledby="products-title">
   <div class="wrap">
-    {{ ui.sectionLabel("C-105", "Digital products") }}
+    {{ ui.sectionLabel("C-10" + (3 + off), "Digital products") }}
     <h2 id="products-title">Digital <em>products.</em></h2>
     <p class="section-intro">Study guides and spreadsheet tools I built from day-to-day civil and land-development work, sold as digital downloads by ZT, LLC.</p>
     <p class="product-disclaimer">Study and spreadsheet tools, not engineering advice. Not affiliated with or endorsed by NCEES.</p>
@@ -67,7 +69,7 @@ sheetTitle: "Civil work — projects & history"
 
 <section class="band" aria-labelledby="history-title">
   <div class="wrap">
-    {{ ui.sectionLabel("C-103", "Work history") }}
+    {{ ui.sectionLabel("C-10" + (4 + off), "Work history") }}
     <h2 id="history-title">Where I’ve <em>worked.</em></h2>
     <div class="roles">
       {%- for r in civil.roles %}
