@@ -1,0 +1,18 @@
+{#- Quick view for a plain project card (same .modal pattern as ui.projectDialog). `a` = activeProjects item with `features`. -#}
+<dialog class="modal" id="dlg-{{ a.id }}" aria-labelledby="dlg-{{ a.id }}-title">
+  <button class="modal-close" type="button" data-close aria-label="Close {{ a.title }}">×</button>
+  <template>
+    {%- if a.cover %}
+    <div class="modal-hero"><img src="/{{ a.cover }}" alt="{{ a.coverAlt or '' }}" width="1200" height="800" decoding="async"></div>
+    {%- endif %}
+    <div class="modal-content">
+      <p class="modal-kicker">{{ a.type }} · {{ a.status }}</p>
+      <h2 id="dlg-{{ a.id }}-title">{{ a.title }}{% if a.titleNote %} <span class="card-title-note">({{ a.titleNote }})</span>{% endif %}</h2>
+      <p>{{ a.text }}</p>
+      <h3 class="modal-subhead">Features</h3>
+      <ul class="modal-features">{% for f in a.features %}<li>{{ f }}</li>{% endfor %}</ul>
+      {%- if a.disclaimer %}<p class="modal-fine">{{ a.disclaimer }}</p>{% endif %}
+      {%- if a.credit %}<p class="modal-fine modal-credit">{{ a.credit }}</p>{% endif %}
+    </div>
+  </template>
+</dialog>

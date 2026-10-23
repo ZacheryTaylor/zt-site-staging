@@ -1249,15 +1249,13 @@ details[open] > summary { background: var(--blueprint-soft); }
 
 /* Plain project cards: optional feature list + fine print */
 .card-title-note { color: var(--grey-text); font-family: var(--sans); font-size: 0.75rem; font-weight: 600; white-space: nowrap; }
-.card-details { margin-top: 12px; border-top: 1px dashed var(--line); }
-.card-details > summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; color: var(--blueprint); font-size: 0.86rem; font-weight: 700; }
-.card-details > summary:hover { text-decoration: underline; }
-details.card-details[open] > summary { background: none; }
-.card-details ul { display: grid; gap: 8px; margin: 0 0 6px; padding-left: 18px; color: var(--muted); font-size: 0.86rem; line-height: 1.5; }
-.card-fine { margin-top: 10px; color: var(--grey-text) !important; font-size: 0.76rem !important; line-height: 1.45; }
+details.card-fine { margin-top: 10px; color: var(--grey-text) !important; font-size: 0.76rem !important; line-height: 1.45; }
 .card-fine + .card-fine { margin-top: 4px; }
 .card-credit { font-weight: 600; }
-.card-details > summary { list-style: none; gap: 6px; }
-.card-details > summary::-webkit-details-marker { display: none; }
-.card-details > summary::after { content: "+"; font-size: 1rem; line-height: 1; }
-details.card-details[open] > summary::after { content: "−"; }
+details/* Quick view for plain project cards */
+button.card-button { font-family: inherit; line-height: inherit; }
+.modal-subhead { margin: 22px 0 10px; color: var(--blueprint); font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.modal-features { display: grid; gap: 10px; padding-left: 20px; color: var(--graphite); font-size: 0.95rem; line-height: 1.55; }
+.modal-fine { margin-top: 18px; color: var(--grey-text); font-size: 0.82rem; line-height: 1.5; }
+.modal-fine + .modal-fine { margin-top: 6px; }
+.modal-credit { font-weight: 600; }

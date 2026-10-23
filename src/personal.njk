@@ -101,3 +101,6 @@ groups:
 {%- for p in projects.life %}
 {{ ui.projectDialog(p) }}
 {%- endfor %}
+{%- for a in activeProjects.items %}{% if a.features %}
+{% include "partials/plain-dialog.njk" %}
+{%- endif %}{% endfor %}
