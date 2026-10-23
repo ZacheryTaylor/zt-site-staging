@@ -1246,21 +1246,4 @@ details[open] > summary { background: var(--blueprint-soft); }
 @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
 
-/* Active projects (home + Life & Interests): a compact, plain list */
-.ap-band { padding-block: 40px; }
-.ap-title { font-size: 1.5rem; margin-bottom: 12px; }
-.ap-list { list-style: none; max-width: 860px; }
-.ap-list li { display: grid; grid-template-columns: 210px 1fr auto; gap: 4px 18px; padding: 12px 0; border-bottom: 1px dashed var(--line); align-items: baseline; }
-.ap-name { font-weight: 700; color: var(--ink); }
-.ap-text { color: var(--muted); font-size: 0.93rem; }
-.ap-status { color: var(--grey-text); font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
-@media (max-width: 760px) {
-  .ap-list li { grid-template-columns: 1fr; }
-}
 
-/* Home: civil work is a single slim link row (#civil) */
-.civil-row-wrap { padding-block: 8px 28px; }
-.civil-row { display: flex; align-items: baseline; gap: 6px 16px; flex-wrap: wrap; max-width: 860px; padding: 14px 0; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); color: var(--ink); font-weight: 700; text-decoration: none; }
-.civil-row-arrow { margin-left: auto; color: var(--blueprint); transition: transform 0.2s var(--ease); }
-.civil-row:hover, .civil-row:focus-visible { color: var(--blueprint); text-decoration: none; }
-.civil-row:hover .civil-row-arrow { transform: translateX(4px); }
