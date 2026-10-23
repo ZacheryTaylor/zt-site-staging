@@ -1,7 +1,8 @@
 /*
   PLAIN PROJECT CARDS on Life & Interests: projects that don't have their own
-  project page (yet). Same card look as the others, but no page and no quick view.
-  group: the Life & Interests group id the card joins ("apps" or "projects").
+  project page (yet). Same card look as the others; no page. `features` adds a Quick view.
+  group: "apps" = a card in the Apps group; "inworks" = the In the works block
+  (partials/in-the-works.njk) right after Reading & quotes.
   status: shown above the title. cover: image under src/ (optional).
   href: ONLY for public, live pages. Leave it out for private work.
 */
@@ -38,22 +39,12 @@ const activeProjects = {
       credit: "Zach Taylor, EI (Engineer Intern), ZT, LLC"
     },
     {
-      id: "products",
-      group: "projects",
-      type: "Digital Products",
-      title: "Digital products",
-      status: "Live on Gumroad",
-      cover: "images/personal/covers/digital-products.svg",
-      text: "Study guides and spreadsheet tools from civil work: PE exam prep, estimating and land development, and real estate investing analyzers.",
-      href: "/civil.html#products-title",
-      hrefLabel: "See the products"
-    },
-    {
       id: "stem-books",
-      group: "projects",
-      type: "Children’s Books",
+      group: "inworks",
+      type: "Children’s books",
       title: "STEM picture book series",
-      status: "Book 1 in progress",
+      titleNote: "working title TBD",
+      status: "Early concept: Book 1 outline stage",
       cover: "images/personal/covers/stem-books.svg",
       text: "Read-aloud picture books for ages 4–7 about how bridges, roads, and stormwater work, by Zachery A. Taylor and published by ZT, LLC."
     }

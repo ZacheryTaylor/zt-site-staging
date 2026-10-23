@@ -11,28 +11,22 @@ scripts: ["/assets/js/quotes.js"]
 groups:
   - id: podcasts
     anchor: podcasts
-    sheet: "L-304"
+    sheet: "L-305"
     title: "Podcasts with friends"
     blurb: "Long-form conversation: a weekly NBA show, and an interview show that keeps a dynasty league connected all year."
     ids: ["dynasty-dimwits-podcast", "break-starter-podcast"]
   - id: fantasy
     anchor: fantasy
-    sheet: "L-305"
+    sheet: "L-306"
     title: "Best Ball & the data behind it"
     blurb: "A hobby that turned into a research habit — a season-by-season archive plus the spreadsheets and models I use to draft."
     ids: ["bestball-archive", "bestball-value-surplus", "fantasy-cooccurrence", "bestball-draft-valuation", "bestball-drafting-plan"]
   - id: apps
     anchor: apps
-    sheet: "L-306"
+    sheet: "L-307"
     title: "Apps"
     blurb: "Web apps I’ve built: two for my leagues, and two tools for land-development work that are still in development."
     ids: ["draft-the-stars", "bet-tracker"]
-  - id: projects
-    anchor: projects
-    sheet: "L-307"
-    title: "Projects"
-    blurb: "Things I make and sell through ZT, LLC: study and spreadsheet tools, and a children’s picture book series."
-    ids: []
 ---
 {%- import "macros.njk" as ui with context -%}
 {%- import "story-index.njk" as si with context -%}
@@ -48,9 +42,12 @@ groups:
 
 {% include "partials/reading-quotes.njk" %}
 
+{%- set iwSheet = "L-303" %}
+{% include "partials/in-the-works.njk" %}
+
 <section class="band story-index-band" id="story-index" aria-labelledby="story-index-title">
   <div class="wrap">
-    {{ ui.sectionLabel("L-303", "The story index") }}
+    {{ ui.sectionLabel("L-304", "The story index") }}
     <h2 id="story-index-title">Every milestone, <em>by year.</em></h2>
     <p class="section-intro">The whole story since {{ storyIndex.years[storyIndex.years.length - 1].year }}, newest first: {{ storyIndex.entries.length }} milestones. Filter by type, and open any line for the detail.</p>
     {{ si.list(storyIndex.years, { filters: true, anchors: true }) }}
