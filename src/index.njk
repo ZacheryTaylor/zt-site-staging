@@ -64,8 +64,8 @@ scripts: ["/assets/js/quotes.js"]
 
 <section class="band" id="projects" aria-labelledby="projects-title">
   <div class="wrap">
-    {{ ui.sectionLabel("M-201", "Engineering projects") }}
-    <h2 id="projects-title">Projects in progress <em>and practice.</em></h2>
+    {{ ui.sectionLabel("M-201", "Engineering & mathematics") }}
+    <h2 id="projects-title"><em>Academia.</em></h2>
     <p class="section-intro">Design, CFD, mechatronics, and statistics from my mechanical engineering and mathematics degrees — each with its own page, reports, and photos.</p>
     <ul class="project-grid">
       {%- for id in featuredIds %}{% for p in projects.academic %}{% if p.id == id %}
@@ -73,7 +73,7 @@ scripts: ["/assets/js/quotes.js"]
       {%- endif %}{% endfor %}{% endfor %}
     </ul>
     <div class="btn-row" style="margin-top:28px">
-      <a class="btn btn-primary" href="/academic.html">All {{ projects.academic.length }} projects</a>
+      <a class="btn btn-primary" href="/academic.html">All {{ projects.academic.length }} academic projects</a>
     </div>
   </div>
 </section>
