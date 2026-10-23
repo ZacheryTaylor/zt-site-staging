@@ -1246,11 +1246,14 @@ details[open] > summary { background: var(--blueprint-soft); }
 @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
 
-/* Active projects (home + Life & Interests) — reuses the Now board */
-.ap-board .status { white-space: nowrap; }
-.ap-groups { display: grid; gap: 10px; margin-top: 14px; }
-.ap-groups dt { color: var(--grey-text); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-.ap-groups dd { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 0; }
-.ap-groups dd a { display: inline-block; padding: 4px 10px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--ink); font-size: 0.84rem; line-height: 1.4; }
-.ap-groups dd a:hover, .ap-groups dd a:focus-visible { border-color: var(--blueprint); color: var(--blueprint); text-decoration: none; }
-.ap-more { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; }
+/* Active projects (home + Life & Interests): a compact, plain list */
+.ap-band { padding-block: 40px; }
+.ap-title { font-size: 1.5rem; margin-bottom: 12px; }
+.ap-list { list-style: none; max-width: 860px; }
+.ap-list li { display: grid; grid-template-columns: 210px 1fr auto; gap: 4px 18px; padding: 12px 0; border-bottom: 1px dashed var(--line); align-items: baseline; }
+.ap-name { font-weight: 700; color: var(--ink); }
+.ap-text { color: var(--muted); font-size: 0.93rem; }
+.ap-status { color: var(--grey-text); font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
+@media (max-width: 760px) {
+  .ap-list li { grid-template-columns: 1fr; }
+}

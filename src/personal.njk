@@ -21,8 +21,8 @@ groups:
     ids: ["bestball-archive", "bestball-value-surplus", "fantasy-cooccurrence", "bestball-draft-valuation", "bestball-drafting-plan"]
   - id: apps
     anchor: apps
-    title: "Apps built for my leagues"
-    blurb: "Small web apps for the people I play with — built because the group needed them."
+    title: "Apps"
+    blurb: "Web apps I’ve built: two for my leagues, and two tools for land-development work that are still in development."
     ids: ["draft-the-stars", "bet-tracker"]
 ---
 {%- import "macros.njk" as ui with context -%}
@@ -37,8 +37,7 @@ groups:
   </div>
 </header>
 
-{%- set apId = "life-ap" %}{%- set apSheet = "P-101" %}
-{% include "partials/active-projects.njk" %}
+{% include "partials/reading-quotes.njk" %}
 
 <section class="band story-index-band" id="story-index" aria-labelledby="story-index-title">
   <div class="wrap">
@@ -49,31 +48,35 @@ groups:
   </div>
 </section>
 
-{% include "partials/reading-quotes.njk" %}
 
 {#- the quote bank project is presented inside Reading & quotes -#}
 {%- set used = ["quote-bank-export"] %}
 {%- for g in groups %}
 <section class="band" id="{{ g.anchor }}" aria-labelledby="g-{{ g.id }}">
   <div class="wrap">
+    {%- if g.id == "apps" %}<span id="bet-tracker" class="anchor-alias" aria-hidden="true"></span>{% endif %}
     <div class="group-head">
       <div>
         <h2 id="g-{{ g.id }}">{{ g.title }}</h2>
         <p>{{ g.blurb }}</p>
       </div>
-      <p class="count">{{ g.ids.length }} {{ "project" if g.ids.length == 1 else "projects" }}</p>
+      {%- set n = g.ids.length %}{% if g.id == "apps" %}{% for a in activeProjects.items %}{% if a.app and not a.projectId %}{% set n = n + 1 %}{% endif %}{% endfor %}{% endif %}
+      <p class="count">{{ n }} {{ "project" if n == 1 else "projects" }}</p>
     </div>
     <ul class="project-grid">
       {%- for id in g.ids %}{% for p in projects.life %}{% if p.id == id %}
       {{ ui.projectCard(p, 3, true) }}{% set _n = used.push(p.id) %}
       {%- endif %}{% endfor %}{% endfor %}
+      {%- if g.id == "apps" %}{% for a in activeProjects.items %}{% if a.app and not a.projectId %}
+      {% include "partials/dev-app-card.njk" %}
+      {%- endif %}{% endfor %}{% endif %}
     </ul>
   </div>
 </section>
-{%- if g.id == "apps" %}
-{% include "partials/bet-tracker-feature.njk" %}
-{%- endif %}
 {%- endfor %}
+
+{%- set apId = "life-ap" %}{% set apSkipApps = true %}
+{% include "partials/active-projects.njk" %}
 
 {#- Safety net: anything added to personal-projects-data.js but not grouped above still shows. -#}
 {%- set extra = [] %}

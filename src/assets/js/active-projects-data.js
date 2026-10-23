@@ -2,6 +2,9 @@
   ACTIVE PROJECTS — shown on the home page and on Life & Interests
   (partials/active-projects.njk). One short line each.
   status: shown as written. tone: "active" (green) | "ongoing" (blue) | "scheduled" (bronze)
+  app: true = also an app. In-development apps (no `projectId`) get a plain card in
+  the "Apps" group on Life & Interests; `projectId` points to an existing card in
+  personal-projects-data.js. On Life & Interests the compact list skips apps.
   href: only for public, live pages. Leave it out for private previews.
   Digital products are pulled from civil-work-data.js and grouped by the
   `productGroups` below (match on the product's Gumroad link).
@@ -11,6 +14,8 @@ const activeProjects = {
   items: [
     {
       id: "parcel-filter",
+      app: true,
+      type: "Web Application",
       label: "Land research tool",
       title: "Parcel Filter",
       text: "A map tool that sorts Northwest Florida parcels by acreage, vacancy, zoning, flood zone, and utilities.",
@@ -19,6 +24,8 @@ const activeProjects = {
     },
     {
       id: "tree-survey",
+      app: true,
+      type: "Mobile Web App",
       label: "Field app",
       title: "Tree Survey App",
       text: "An offline phone app that logs trees with averaged GPS and exports Civil 3D points, paired with a tree protection and mitigation calculator.",
@@ -45,6 +52,8 @@ const activeProjects = {
     },
     {
       id: "draft-the-stars",
+      app: true,
+      projectId: "draft-the-stars",
       label: "Web app",
       title: "Draft the Stars",
       text: "A fantasy league for Dancing with the Stars: live draft board, weekly scoring, and rankings.",
