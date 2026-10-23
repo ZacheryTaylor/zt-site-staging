@@ -1257,3 +1257,10 @@ details[open] > summary { background: var(--blueprint-soft); }
 @media (max-width: 760px) {
   .ap-list li { grid-template-columns: 1fr; }
 }
+
+/* Home: civil work is a single slim link row (#civil) */
+.civil-row-wrap { padding-block: 8px 28px; }
+.civil-row { display: flex; align-items: baseline; gap: 6px 16px; flex-wrap: wrap; max-width: 860px; padding: 14px 0; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); color: var(--ink); font-weight: 700; text-decoration: none; }
+.civil-row-arrow { margin-left: auto; color: var(--blueprint); transition: transform 0.2s var(--ease); }
+.civil-row:hover, .civil-row:focus-visible { color: var(--blueprint); text-decoration: none; }
+.civil-row:hover .civil-row-arrow { transform: translateX(4px); }

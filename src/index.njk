@@ -21,20 +21,17 @@ scripts: ["/assets/js/quotes.js"]
       <p class="positioning">Civil designer and Engineer Intern in Pensacola — I design <strong>site grading, stormwater, and utility plans</strong> for land development. I also build things, and I’m writing my first book.</p>
       <p class="motto">“Be a good human being, provide value to people.”</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="/civil.html">See my civil work</a>
-        <a class="btn" href="/book.html">About the book</a>
+        <a class="btn btn-primary" href="/book.html">About the book</a>
         <a class="btn" href="/resume.pdf">Résumé (PDF)</a>
       </div>
     </div>
     <aside class="hero-panel" aria-label="About Zachery">
-      {% include "partials/siteplan.njk" %}
       <div class="portrait-stack">
         <span class="tag" aria-hidden="true">ZT / DESIGNER · WRITER</span>
         <div class="portrait secondary">{% picture "images/G.jpg", "", "portrait", { loading: "eager", sizes: "104px" } %}</div>
         <div class="portrait primary">{% picture "images/H.jpg", "Portrait of Zachery Taylor", "portrait", { loading: "eager", fetchpriority: "high", sizes: "126px" } %}</div>
       </div>
       <div class="hero-panel-content">
-        <p class="small-label">ZT / 001 · SITE PLAN</p>
         <h2>Ideas become structure.</h2>
         <p>Writing, engineering, and long-term work built from the same foundation: clarity, discipline, and useful contribution.</p>
       </div>
@@ -148,17 +145,9 @@ scripts: ["/assets/js/quotes.js"]
 {%- set apId = "home-ap" %}
 {% include "partials/active-projects.njk" %}
 
-<section class="band" id="civil" aria-labelledby="civil-title">
-  <div class="wrap">
-    {{ ui.sectionLabel("C-101", "Civil work") }}
-    <h2 id="civil-title">Civil <em>work.</em></h2>
-    <p class="section-intro">{{ civil.summary }}</p>
-    <div class="btn-row" style="margin-top:22px">
-      <a class="btn btn-primary" href="/civil.html">Work history &amp; credentials</a>
-      <a class="btn" href="/civil.html#products-title">Digital products</a>
-    </div>
-  </div>
-</section>
+<nav class="civil-row-wrap" id="civil" aria-label="Civil work">
+  <div class="wrap"><a class="civil-row" href="/civil.html"><span>Civil work</span><span class="civil-row-arrow" aria-hidden="true">→</span></a></div>
+</nav>
 
 <section class="band" id="contact" aria-labelledby="contact-title">
   <div class="wrap">
